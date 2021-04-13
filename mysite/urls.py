@@ -9,7 +9,8 @@ urlpatterns = [
     #path('',views.index,name='index'),
     path('gallery/',showgallery,name='NSS Gallery'),
     path('members/',seeMembers,name='NSS Members'), 
-    path('',homepage,name='NSS Unit 8'), 
-
+    path('',homepage,name='NSS Unit 8'),
     path('<slug:slug>/', post_detail, name='post_detail'),
+    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
 ]
