@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div style="background-color:#E56717;">
+    <br>
+    <br>
+  </div>
+  <div style="margin: 30px;">
+    <h1> {{post.title}} </h1>
+    <small>Posted at {{ post.date_added }}</small>
+    <p><strong> {{post.intro}} </strong></p>
+    <p> {{ post.body }} </p>
+  </div>
+  
+{% endblock %}

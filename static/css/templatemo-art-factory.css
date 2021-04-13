@@ -85,7 +85,7 @@ dl,
 dt,
 dd,
 ol,
-ul,
+
 li,
 figure,
 header,
@@ -100,7 +100,15 @@ figcaption {
   border: 0;
   outline: 0;
 }
-
+ul {
+  display: block;
+  list-style-type: none;
+  margin-top: 1em;
+  margin-bottom: 1 em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
+}
 .clearfix:after {
   content: ".";
   display: block;
@@ -120,13 +128,6 @@ html[xmlns] .clearfix {
 
 * html .clearfix {
   height: 1%;
-}
-
-ul,
-li {
-  padding: 0;
-  margin: 0;
-  list-style: none;
 }
 
 header,
@@ -294,7 +295,7 @@ header
 */
 
 .background-header {
-  background-color: #fff;
+  background-color:#fff;
   height: 80px !important;
   position: fixed !important;
   top: 0px;
@@ -335,12 +336,12 @@ header
 
 .header-area .main-nav {
   min-height: 80px;
-  background: transparent;
+  background-color: transparent;
 }
 
 .header-area .main-nav .logo {
   line-height: 80px;
-  color: #fff;
+  color: rgba(255, 253, 252, 0.815);
   font-size: 28px;
   font-weight: 700;
   text-transform: uppercase;
@@ -565,7 +566,7 @@ header
 .header-area .main-nav .menu-trigger.active span,
 .header-area .main-nav .menu-trigger.active span:before,
 .header-area .main-nav .menu-trigger.active span:after {
-  background-color: transparent;
+  background-color: #E56717;
   width: 100%;
 }
 
