@@ -11,6 +11,21 @@ class Post(models.Model):
   class Meta:
     ordering = ['-date_added']
   
+class Car(models.Model):
+    name = models.CharField(max_length=255)
+    price = models.DecimalField(max_digits=5, decimal_places=2)
+    photo = models.ImageField(upload_to='cars')
+
+class Members(models.Model):
+    Name = models.CharField(max_length=255)
+    Roll_Number = models.CharField(max_length=9)
+    FB_Handle = models.CharField(max_length=100)
+    Insta_Id = models.CharField(max_length=100)
+    Twitter = models.CharField(max_length=100)
+    LinkedIn = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='MembersPhoto')
+
+
 class Comment(models.Model):
     post = models.ForeignKey(Post, related_name='comments', on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
@@ -20,3 +35,4 @@ class Comment(models.Model):
 
     class Meta:
         ordering = ['date_added']
+    

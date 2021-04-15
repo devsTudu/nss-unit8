@@ -6,6 +6,19 @@
   </div>
   <div style="margin: 30px;">
     <h1>The active members of nss unit 8</h1>
+    {% for member in members %}
+    <div class="card" style="width:250;height:auto;">
+    <h5> {{member.Name}} </h5>
+    <p> {{member.Roll_Number}} </p>
+    <img src="{{member.image.url}}" style="width: 200px;height: 200px;border-radius: 50%;">
+    <ul class="social">
+      <li><a href="{{member.FB_Handle}}"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="https://twitter.com/{{member.Twitter}}"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="https://www.instagram.com/{{member.Insta_Id}}"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="{{member.LinkedIn}}"><i class="fa fa-linkedin"></i></a></li>
+    </ul>
+    </div>
+    {% endfor %}
   </div>
-  
+
 {% endblock %}

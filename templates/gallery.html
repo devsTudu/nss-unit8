@@ -6,6 +6,11 @@
   </div>
   <div style="margin: 30px;">
     <h1> some photos and videos here</h1>
+    {% for car in cars %}
+    <h5> {{car.name}} </h5>
+    <p> {{car.price}} </p>
+    <img src="{{car.photo.url}}">
+    {% endfor %}
     
   </div>
   
