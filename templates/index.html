@@ -12,8 +12,8 @@
                     <div class="left-text col-lg-6 col-md-6 col-sm-6 col-xs-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s"
                     data-scroll-reveal-id="1" data-scroll-reveal-initialized="true" data-scroll-reveal-complete="true">
                         <h1><strong>NSS Unit 8</strong><br>IIT Kharagpur </h1>
-                        <p><b>National Service Scheme (NSS) is a voluntary organisation launched in the Gandhiji’s birth century year,1969. The programme aimed to promote students’ personality development by the means of community service. Starting from a handful of 37 universities, today it has got more than 3.2 million student volunteers from all over the country.</b></p>
-                        <a target="_blank" href="https://nss.gov.in/" class="main-button-slider">Find Out More</a>
+                        <p><b>National Service Scheme (NSS) is a voluntary organisation launched in Gandhiji’s birth century year, 1969. The programme aims to promote students’ personality development by the means of community service. Coming from humble beginnings, NSS initially had a meagre 37 universities under it, which has grown substantially over the years, now having more than 3.2 million student volunteers from all over the nation.</b></p>
+                        You can find out more about NSS <a target="_blank" href="https://nss.gov.in/" class="main-button-slider">here</a>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                         <img src="{% static 'images/slider-icon.png' %}" class="rounded img-fluid d-block mx-auto" alt="First Vector Graphic ">
@@ -35,24 +35,24 @@
                 </div>
                 <div class="right-text col-lg-5 col-md-12 col-sm-12 mobile-top-fix">
                     <div class="left-heading">
-                        <h5>About NSS IIT KGP</h5>
+                        <h5>About NSS IIT Kharagpur</h5>
                     </div>
                     <div class="left-text">
-                        <p>In IIT-KGP, NSS has been made a part of core academic curriculum for about one third of the first and second year undergraduate students. The programme comprises of weekly village activities and a minimum of one compulsory annual camp.
-                        Insight of our activities-
+                        <p>In IIT-KGP, NSS has been made a part of core academic curriculum for close to one-third of the first and second year undergraduate students. The programme comprises of weekly activities held in villages and a minimum of one compulsory annual camp.
+                        Some of the activities NSS IIT-KGP indulges in include-
                         <br>Regular activities-
                           <ul><small>
                             <li>
-                              Education- From each unit, a teaching team is selected who give weekly tutuions to village school children or children of poor workers in the campus.
+                              Education- Children are the future of the country and an educated mind can do wonders for the society as well as the world. From each unit, a teaching team is selected who give weekly tutuions to village school children or children of poor workers in the campus.
                             </li>
                             <li>
-                              Cleanliness and Environment preservation- Tree plantation, garbage picking, purification of water resourses,’tripal’ distribution for rain water conservation and waste management through indegenious techniques.
+                              Cleanliness and Environment preservation- Nature birthed us not to destroy it, rather to become a part of it. All volunteers contribute in tree plantation, garbage picking, purification of water resourses, ’tripal’ distribution for rain water conservation and waste management through indegenious techniques.
                             </li>
                             <li>
-                              Spreading Awareness- Spreading general awareness on issues of health and hygiene by organising rallies, street play or ‘nukkad’ etc.
+                              Spreading Awareness- We believe in spreading awareness to the common person, and what better way to do it other than something that catches their interest? For instance, we spread general awareness on issues of health and hygiene by organising rallies, street plays or ‘nukkad’ etc.
                             </li>
                             <li>
-                              Not cash but ‘Kind’ donation- Distribution of clothing and apt books to village residents.
+                              Not cash but ‘Kind’ donation- We as students cannot provide a constant monetary help to the people who truly need it, but that doesn’t mean it must stop us. Distribution of clothing and apt books to village residents is undertaken on a regular basis by the volunteers.
                             </li></small>
                           </ul>
                         </p>
@@ -85,9 +85,9 @@
                             <img src="{% static 'images/about-icon-01.png' %}" alt="">
                             <div class="text">
                                 <h6>{{ post.title }}</h6>
-                                <small>Posted at {{ post.date_added }}
+                                <small>Posted on {{ post.date_added }}
                                 <p>{{ post.intro }}</p>
-                                <a href="{% url 'post_detail' post.slug %}">Read more</a>
+                                <a href="{% url 'post_detail' post.slug %}">Complete article</a>
                             </div>
                         </li>
                       {% endfor %}
