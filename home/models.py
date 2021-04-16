@@ -11,10 +11,6 @@ class Post(models.Model):
   class Meta:
     ordering = ['-date_added']
   
-class Car(models.Model):
-    name = models.CharField(max_length=255)
-    price = models.DecimalField(max_digits=5, decimal_places=2)
-    photo = models.ImageField(upload_to='cars')
 
 class Members(models.Model):
     Name = models.CharField(max_length=255)

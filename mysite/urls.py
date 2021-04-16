@@ -7,16 +7,19 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
  
 
 
-
-from home.views import homepage, post_detail, showgallery, seeMembers
+from posts.views import *
+from home.views import homepage, post_detail, seeMembers
 
 urlpatterns = [
     path('admin/', admin.site.urls), 
     #path('',views.index,name='index'),
     path('gallery/',showgallery,name='NSS Gallery'),
-    path('members/',seeMembers,name='NSS Members'), 
+    path('members/',seeMembers,name='NSS Members'),
+    path('articles/',showarticles,name='NSS Members'), 
+    path('blogs/',showblogs,name='NSS Members'), 
+    path('research/',showresearch,name='NSS Members'), 
+    path('videos/',showvideos,name='NSS Members'),    
     path('',homepage,name='NSS Unit 8'), 
-
     path('<slug:slug>/', post_detail, name='post_detail'),
 ]
 

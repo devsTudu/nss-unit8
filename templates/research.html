@@ -5,11 +5,13 @@
     <br>
   </div>
   <div style="margin: 30px;">
-    <h1> some photos and videos here</h1>
+    <h1>Some research papers</h1>
     {% for object in list %}
     <h5> {{object.Title}} </h5>
-    <p> {{object.Story}} </p>
+    <h6>{{object.Contributors}}</h6>
+    <p> {{object.Intro}} </p>
     <img src="{{object.photo.url}}">
+    <iframe src="{{object.Link_to_Published_Doc}} ?embedded=true"></iframe>
     {% endfor %}
     
   </div>

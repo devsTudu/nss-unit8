@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponse,redirect
 
 from .forms import CommentForm
-from .models import Post, Car, Members
+from .models import Post, Members
 
 def homepage(request):
   posts = Post.objects.all()
@@ -24,9 +24,6 @@ def post_detail(request, slug):
 
     return render(request, 'readblog.html', {'post': post, 'form': form})
 
-def showgallery(request):
-  objects = Car.objects.all()
-  return render(request,'gallery.html',{'cars':objects})
 
 def seeMembers(request):
   members = Members.objects.all()
