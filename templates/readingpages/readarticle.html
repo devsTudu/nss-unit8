@@ -4,17 +4,15 @@
     <br>
     <br>
   </div>
-  <div style="margin: 30px;">
-    <h1> Articles</h1>
-    {% for object in list %}
-    <card>
+  <div style="margin: 30%;">
+    <h>Reading Article</h>
     <h5> {{object.Title}} </h5>
     <h6>{{object.Contributors}}</h6>
+    <small>Posted at {{ object.date_added }}</small>
     <p> {{object.intro}} </p>
-    <a href="/posts/{{ object.slug }}">Complete article</a>
+    <img src="{{object.photo.url}}">
+    <iframe width="1000" src="{{object.Link_to_Published_Doc}}?embedded=true"></iframe>
     
-    </card>
-    {% endfor %}
     
   </div>
   

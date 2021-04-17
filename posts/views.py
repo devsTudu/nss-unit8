@@ -22,3 +22,12 @@ def showblogs(request):
   return render(request,'blogs.html',{'list':objects})
 
 
+def articledetail(request, slug):
+  q = articles.objects.filter(slug__iexact = slug)
+  if q.exists():
+     q = q.first()
+  else:
+      return HttpResponse('<h1>Post Not Found</h1>')
+   #return render(request, 'posts/details.html', context)
+    
+  return render(request, 'readingpages/readarticle.html', {'object': q})

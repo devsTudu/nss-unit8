@@ -5,7 +5,7 @@ class Post(models.Model):
   title = models.CharField(max_length=200)
   slug = models.SlugField()
   intro = models.TextField()
-  body = models.TextField()
+  doc_link = models.CharField(max_length=400)
   date_added = models.DateTimeField(auto_now_add=True)
   
   class Meta:

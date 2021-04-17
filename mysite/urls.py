@@ -21,6 +21,9 @@ urlpatterns = [
     path('videos/',showvideos,name='NSS Members'),    
     path('',homepage,name='NSS Unit 8'), 
     path('<slug:slug>/', post_detail, name='post_detail'),
+    path('posts/<slug:slug>/',articledetail, name='post_detail'),
+ 
+    
 ]
 
 urlpatterns += staticfiles_urlpatterns()

@@ -9,7 +9,7 @@
     {% for object in list %}
     <h5> {{object.Title}} </h5>
     <h6>{{object.Contributors}}</h6>
-    <p> {{object.Intro}} </p>
+    <p> {{object.intro}} </p>
     <img src="{{object.photo.url}}">
     <iframe src="{{object.Link_to_Published_Doc}} ?embedded=true"></iframe>
     {% endfor %}
