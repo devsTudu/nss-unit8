@@ -15,11 +15,9 @@ class Post(models.Model):
 class Members(models.Model):
     Name = models.CharField(max_length=255)
     Roll_Number = models.CharField(max_length=9)
-    FB_Handle = models.CharField(max_length=100)
-    Insta_Id = models.CharField(max_length=100)
-    Twitter = models.CharField(max_length=100)
-    LinkedIn = models.CharField(max_length=100)
-    image = models.ImageField(upload_to='MembersPhoto')
+    Email = models.CharField(max_length=100)
+    image_url = models.CharField(max_length=255,null=True)
+    city = models.CharField(max_length=100, null=True)
 
 
 class Comment(models.Model):

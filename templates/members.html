@@ -1,24 +1,32 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
   <div style="background-color:#E56717;">
     <br>
     <br>
   </div>
-  <div style="margin: 30px;">
+  <div style="margin: auto;">
     <h1>The active members of nss unit 8</h1>
-    {% for member in members %}
-    <div class="card" style="width:250;height:auto;">
-    <h5> {{member.Name}} </h5>
-    <p> {{member.Roll_Number}} </p>
-    <img src="{{member.image.url}}" style="width: 200px;height: 200px;border-radius: 50%;">
-    <ul class="social">
-      <li><a href="{{member.FB_Handle}}"><i class="fa fa-facebook"></i></a></li>
-      <li><a href="https://twitter.com/{{member.Twitter}}"><i class="fa fa-twitter"></i></a></li>
-      <li><a href="https://www.instagram.com/{{member.Insta_Id}}"><i class="fa fa-instagram"></i></a></li>
-      <li><a href="{{member.LinkedIn}}"><i class="fa fa-linkedin"></i></a></li>
-    </ul>
+    <div class="container">
+      <div class="row row-cols-3">
+        {% for member in members %}
+          <div class="col">
+          <div class="card" style="width: 330px;">
+          <div class="card-body">
+            {% if member.image_url %}
+              <img src="{{ member.image_url }}" class="card-img-top" alt="{{member.Name}}" style="border-radius: 50%;" >
+            {% else %}
+                <img src="{% static '/images/profile.jpeg' %}" class="card-img-top" alt="{{member.Name}}" style="border-radius: 50%;">
+            {% endif %}
+            <h5 class="card-title">{{member.Name}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{ member.city }}</h6>
+            <p class="card-text">{{member.Roll_Number}} {{member.Email}} </p>
+            
+          </div>
+          </div>
+          </div>  
+        {% endfor %}
+      </div>
     </div>
-    {% endfor %}
   </div>
-
 {% endblock %}

@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import *
 
 def showarticles(request):
-  objects = articles.objects.all()
+  objects = article.objects.all()
   return render(request,'articles.html',{'list':objects})
 
 def showresearch(request):
@@ -10,20 +10,20 @@ def showresearch(request):
   return render(request,'research.html',{'list':objects})
 
 def showvideos(request):
-  objects = videos.objects.all()
+  objects = video.objects.all()
   return render(request,'videos.html',{'list':objects})
 
 def showgallery(request):
-  objects = photos.objects.all()
+  objects = photo.objects.all()
   return render(request,'gallery.html',{'list':objects})
 
 def showblogs(request):
-  objects = blogs.objects.all()
+  objects = blog.objects.all()
   return render(request,'blogs.html',{'list':objects})
 
 
 def articledetail(request, slug):
-  q = articles.objects.filter(slug__iexact = slug)
+  q = article.objects.filter(slug__iexact = slug)
   if q.exists():
      q = q.first()
   else:

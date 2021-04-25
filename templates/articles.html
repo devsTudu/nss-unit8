@@ -4,18 +4,23 @@
     <br>
     <br>
   </div>
-  <div style="margin: 30px;">
-    <h1> Articles</h1>
-    {% for object in list %}
-    <card>
-    <h5> {{object.Title}} </h5>
-    <h6>{{object.Contributors}}</h6>
-    <p> {{object.intro}} </p>
-    <a href="/posts/{{ object.slug }}">Complete article</a>
-    
-    </card>
+  
+    <h1> Articles</h1>  
+    <div class="container">
+      <div class="row row-cols-3">
+        {% for object in list %}
+          <div class="col">
+          <div class="card" style="width: 330px;">
+          <div class="card-body">
+            <h5 class="card-title">{{object.title}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{object.Contributors}}</h6>
+            <p class="card-text"> {{object.intro}}</p>
+            <a href="/posts/{{ object.slug }}" class="card-link">Read more</a>
+          </div>
+          </div>
+          </div>  
     {% endfor %}
-    
+    </div>
   </div>
   
 {% endblock %}

@@ -1,9 +1,10 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import articles, videos, photos, research
+from .models import article, video, photo, research, blog
 
-admin.site.register(articles)
-admin.site.register(videos)
-admin.site.register(photos)
+admin.site.register(article)
+admin.site.register(video)
+admin.site.register(photo)
 admin.site.register(research)
+admin.site.register(blog)

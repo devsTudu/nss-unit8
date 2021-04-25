@@ -8,7 +8,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 
 from posts.views import *
-from home.views import homepage, post_detail, seeMembers
+from home.views import homepage, post_detail, seeMembers, updateMembers
 
 urlpatterns = [
     path('admin/', admin.site.urls), 
@@ -19,7 +19,8 @@ urlpatterns = [
     path('blogs/',showblogs,name='NSS Members'), 
     path('research/',showresearch,name='NSS Members'), 
     path('videos/',showvideos,name='NSS Members'),    
-    path('',homepage,name='NSS Unit 8'), 
+    path('',homepage,name='NSS Unit 8'),
+    path('update',updateMembers, name='update'),
     path('<slug:slug>/', post_detail, name='post_detail'),
     path('posts/<slug:slug>/',articledetail, name='post_detail'),
  
