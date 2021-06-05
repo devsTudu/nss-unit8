@@ -23,6 +23,7 @@ urlpatterns = [
     path('update',updateMembers, name='update'),
     path('<slug:slug>/', post_detail, name='post_detail'),
     path('posts/<slug:slug>/',articledetail, name='post_detail'),
+    #path('covid_database/',covid_database,name='covid_database'),
  
     
 ]
