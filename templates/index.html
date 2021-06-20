@@ -68,35 +68,10 @@
         </div>
     </section>
     <!-- ***** Features Big Item End ***** -->
-
-
-    <!-- ***** blogs ***** -->
-    <section class="section" id="about2">
-        <div class="container">
-            <div class="row">
-                <div class="left-text col-lg-5 col-md-12 col-sm-12 mobile-bottom-fix">
-                    <div class="left-heading">
-                        <h5>Featured Posts</h5>
-                    </div>
-                    <p>Find the latest post here</p>
-                    <ul>
-                      {% for post in posts %}
-                        <li>
-                            <img src="{% static 'images/about-icon-01.png' %}" alt="">
-                            <div class="text">
-                                <h6>{{ post.title }}</h6>
-                                <small>Posted on {{ post.date_added }}
-                                <p>{{ post.intro }}</p>
-                                <a href="{% url 'post_detail' post.slug %}">Complete article</a>
-                            </div>
-                        </li>
-                      {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ***** Features Big Item End ***** -->
+<br>
+    <a class="main-button" href="/articles">  See Our Articles </a>
+<br>
+<br>
 
 
     <!-- ***** Features Small Start ***** -->
