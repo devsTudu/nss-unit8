@@ -4,13 +4,13 @@
     <br>
     <br>
   </div>
-  <div >
+  <div style="margin:5%; ">
     <br>
-    <h>Reading Article</h>
     <h2> {{object.title}} </h2>
+    <h6>Type: <a style="color: #28a745;font-weight: bold;">{{ object.Article_type }} </a>,Language: <a style="color: #28a745;font-weight: bold;">{{ object.Language }}</a></h6>
     <h6>Contributed By - {{object.Contributors}}</h6>
-    <small>Posted at {{ object.date_added }}</small>
-    
+    <small>Posted at {{ object.date_added }}</small><br>
+    <small>Last Updated {{ object.updated_at}}</small>
     <iframe width="100%" height="1000"  src="{{object.Link_to_Published_Doc}}?embedded=true"></iframe>
         
     
