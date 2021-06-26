@@ -18,6 +18,13 @@ class Members(models.Model):
     Email = models.CharField(max_length=100)
     image_url = models.CharField(max_length=255,null=True)
     city = models.CharField(max_length=100, null=True)
+    
+    class Meta:
+      ordering = ['Name']
+
+    def __str__(self):
+      return self.Name
+
 
 
 class Comment(models.Model):
