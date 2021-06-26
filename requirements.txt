@@ -1,6 +1,5 @@
 django
 gunicorn
-django-heroku
 openpyxl
 pillow
 django-autoslug
