@@ -17,8 +17,9 @@ class article(models.Model):
   TEXT_LANG = (
         ('English', 'English'),
         ('Hindi','Hindi'),
-        ('Urdu','Urdu'),
         ('Bengali','Bengali'),
+        ('Urdu','Urdu'),
+        ('Kannada','Kannada'),
         ('Marathi','Marathi'),
         ('Odia','Odia'),
         ('Telgu','Telgu'),
